@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="/">SKADIK501</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
@@ -22,19 +22,20 @@
                 <div class="navbar-nav">
                     <a class="nav-link" href="#">Stream</a>
                     <a class="nav-link" href="#">Data</a>
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">Input</a>
                 </div>
             </div>
         </div>
     </nav>
     <div class="container-fluid py-3">
-        <div class="p-5 mb-5 bg-dark text-light rounded-3">
+        <div style="background-image: url('img/bg2.jpeg'); height: 380px; background-size:cover; box-shadow:inset 0 0 0 2000px rgba(43, 43, 43, 0.6);"
+            class="p-5 mb-5 bg-image text-light rounded-3">
             <div class="container-fluid py-1">
                 <h1 class="display-5 fw-bold">Multimedia Server SKADIK501</h1>
                 <p class="col-md-8 fs-5">Multimedia Server SKADIK501 adalah layanan pembelajaran berbasis web bagi siswa
                     SKADIK501, nantinya para siswa dapat mengakses laman media stream dan melihat berbagai macam
                     tutorial dan video pengetahuan terupdate yang telah disediakan oleh SKADIK501.</p>
-                <a class="btn btn-primary btn-lg" type="button" href="http://skadik501.net:8096/"> Akses Media
+                <a class="btn btn-success btn-lg" type="button" href="http://skadik501.net:8096/"> Akses Media
                     Stream</a>
             </div>
         </div>

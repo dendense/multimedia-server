@@ -9,7 +9,10 @@ a {
   color: #151d3b;
 }
 
-.bg-foto {
-  background-image: url("https://cdn.pixabay.com/photo/2016/04/13/07/28/cherry-blossom-1326168_1280.jpg");
-  height: 100%;
+.bg-image {
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
 }
