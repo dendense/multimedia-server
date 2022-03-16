@@ -20,7 +20,6 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="#">Stream</a>
                     <a class="nav-link" href="#">Data</a>
                     <a class="nav-link" href="#">Input</a>
                 </div>
