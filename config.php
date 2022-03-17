@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$database   = "db_latis"; //Sesuaikan Database Pribadi
+$database   = "multimedia_server"; //Sesuaikan Database Pribadi
 $username   = "phpskadik501"; //Sesuaikan Akun Pribadi "root"
 $password   = "skadik501"; //Sesuaikan Password Pribadi kosongkan
 

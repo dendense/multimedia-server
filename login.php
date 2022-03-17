@@ -24,7 +24,6 @@
                     <input type="password" name="passwd" required />
                     <div class="pt-3 d-grid">
                         <input type="submit" class="btn btn-primary" name="submit" value="Login" />
-                        <a class="btn btn-success mt-2" href="register.php">Register</a>
                     </div>
                 </div>
             </form>

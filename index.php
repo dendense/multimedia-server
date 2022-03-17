@@ -21,7 +21,14 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                     <a class="nav-link" href="Data.php">Data</a>
-                    <a class="nav-link" href="input.php">Input</a>
+                    <?php 
+                    session_start();
+                    if(isset($_SESSION['username'])) {
+                    echo "<a class='nav-link' href='logout.php'>Logout</a>";
+                    } else {
+                        echo "<a class='nav-link' href='login.php'>Login</a>";
+                    }
+                    ?>
                 </div>
             </div>
         </div>
