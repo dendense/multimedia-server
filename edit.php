@@ -58,15 +58,16 @@ session_start();
                             <th scope="col">Pangkat</th>
                             <th scope="col">Umur</th>
                             <th scope="col">Kelamin</th>
+                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody id="tampil">
                         <?php
-                                require_once "config.php";
-                                $no = 1;
-                                $query = mysqli_query($koneksi, 'SELECT * FROM tb_data');
-                                while ($row = mysqli_fetch_object($query)) {
-                                ?>
+                            require_once "config.php";
+                            $no = 1;
+                            $query = mysqli_query($koneksi, 'SELECT * FROM tb_data');
+                            while ($row = mysqli_fetch_object($query)) {
+                        ?>
                         <tr>
                             <th scope="row"><?php echo $no++ ?></th>
                             <td><?php echo $row->nrp_siswa; ?></td>

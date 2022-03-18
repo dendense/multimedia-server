@@ -45,6 +45,7 @@
     <div class="container pt-4">
         <h2>Edit</h2>
         <form method="POST" action="update.php?id=<?php echo $id; ?>">
+            <input type="hidden" name="id" value="<?php echo $id; ?>">
             <?php
                 for ($i = 0,$j = 0; $i < count($InputPlaceholder),$j < count($InputName); $i++,$j++){?>
             <div class="pt-3">
