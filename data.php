@@ -41,7 +41,9 @@
                 <p class="col-md-8 fs-5">Daftar Sejurba yang bersekolah di SKADIK 501 </p>
                 <?php
                 if(isset($_SESSION['username'])){
-                    echo "<a class='btn btn-success btn-lg' type='button' href='http://skadik501.net:8096/'>Download Data
+                    echo "<a class='btn btn-success btn-lg mr-3' type='submit' name='export' href='proses-print.php'>Download Data
+                    Siswa</a>
+                    <a class='btn btn-primary btn-lg' type='button' href='edit.php'>Edit Data
                     Siswa</a>";
                 } else {
                     echo "<a class='btn btn-success btn-lg' type='button' href='login.php'>Login untuk Unduh</a>";
@@ -50,35 +52,39 @@
             </div>
         </div>
     </div>
-    <table class="table container">
-        <thead>
-            <tr>
-                <th scope="col">No</th>
-                <th scope="col">NRP</th>
-                <th scope="col">Nama Siswa</th>
-                <th scope="col">Pangkat</th>
-                <th scope="col">Umur</th>
-                <th scope="col">Kelamin</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-        include "config.php";
-        $no = 1;
-        $query = mysqli_query($koneksi, 'SELECT * FROM tb_data');
-        while ($data = mysqli_fetch_array($query)) {
-        ?>
-            <tr>
-                <th scope="row"><?php echo $no++ ?></th>
-                <td><?php echo $data['nrp_siswa'] ?></td>
-                <td><?php echo $data['nama_siswa'] ?></td>
-                <td><?php echo $data['pangkat_siswa'] ?></td>
-                <td><?php echo $data['umur_siswa'] ?> Tahun</td>
-                <td><?php echo $data['kelamin_siswa'] ?></td>
-            </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+    <div class="container">
+        <div class="card card-body mb-5">
+            <table class="table container">
+                <thead>
+                    <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">NRP</th>
+                        <th scope="col">Nama Siswa</th>
+                        <th scope="col">Pangkat</th>
+                        <th scope="col">Umur</th>
+                        <th scope="col">Kelamin</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                        require_once "config.php";
+                        $no = 1;
+                        $query = mysqli_query($koneksi, 'SELECT * FROM tb_data');
+                        while ($data = mysqli_fetch_array($query)) {
+                        ?>
+                    <tr>
+                        <th scope="row"><?php echo $no++ ?></th>
+                        <td><?php echo $data['nrp_siswa'] ?></td>
+                        <td><?php echo $data['nama_siswa'] ?></td>
+                        <td><?php echo $data['pangkat_siswa'] ?></td>
+                        <td><?php echo $data['umur_siswa'] ?> Tahun</td>
+                        <td><?php echo $data['kelamin_siswa'] ?></td>
+                    </tr>
+                    <?php } ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <script src="js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>

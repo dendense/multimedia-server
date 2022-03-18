@@ -20,7 +20,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="Data.php">Data</a>
+                    <a class="nav-link" href="data.php">Data</a>
                     <?php 
                     session_start();
                     if(isset($_SESSION['username'])) {
