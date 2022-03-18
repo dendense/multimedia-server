@@ -60,6 +60,7 @@
                         <th scope="col">No</th>
                         <th scope="col">NRP</th>
                         <th scope="col">Nama Siswa</th>
+                        <th scope="col">Korp</th>
                         <th scope="col">Pangkat</th>
                         <th scope="col">Umur</th>
                         <th scope="col">Kelamin</th>
@@ -76,6 +77,7 @@
                         <th scope="row"><?php echo $no++ ?></th>
                         <td><?php echo $data['nrp_siswa'] ?></td>
                         <td><?php echo $data['nama_siswa'] ?></td>
+                        <td><?php echo $data['korp_siswa'] ?></td>
                         <td><?php echo $data['pangkat_siswa'] ?></td>
                         <td><?php echo $data['umur_siswa'] ?> Tahun</td>
                         <td><?php echo $data['kelamin_siswa'] ?></td>

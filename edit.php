@@ -2,7 +2,7 @@
 <html lang="en">
 <?php
 $InputPlaceholder   = ["NRP","Nama","Pangkat","Sekolah","Korp","Kelamin","Umur"];
-$InputName          = ["nrp_siswa","nama_siswa","pangkat_siswa","sekolah_siswa","korp_siswa","kelamin_siswa",];
+$InputName          = ["nrp_siswa","nama_siswa","pangkat_siswa","sekolah_siswa","korp_siswa","kelamin_siswa","umur_siswa"];
 session_start();
 ?>
 
@@ -25,7 +25,7 @@ session_start();
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="Data.php">Data</a>
+                    <a class="nav-link" href="data.php">Data</a>
                     <?php 
                     session_start();
                     if(isset($_SESSION['username'])) {
@@ -54,10 +54,10 @@ session_start();
                             <th scope="col">No</th>
                             <th scope="col">NRP</th>
                             <th scope="col">Nama Siswa</th>
+                            <th scope="col">Korp</th>
                             <th scope="col">Pangkat</th>
                             <th scope="col">Umur</th>
                             <th scope="col">Kelamin</th>
-                            <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody id="tampil">
@@ -71,11 +71,12 @@ session_start();
                             <th scope="row"><?php echo $no++ ?></th>
                             <td><?php echo $row->nrp_siswa; ?></td>
                             <td><?php echo $row->nama_siswa; ?></td>
+                            <td><?php echo $row->korp_siswa; ?></td>
                             <td><?php echo $row->pangkat_siswa; ?></td>
                             <td><?php echo $row->umur_siswa; ?> Tahun</td>
                             <td><?php echo $row->kelamin_siswa; ?></td>
                             <td>
-                                <a class="btn btn-sm btn-primary" href="edit.php?id=<?php echo $row->id; ?>">Edit</a>
+                                <a class="btn btn-sm btn-primary" href="editing.php?id=<?php echo $row->id; ?>">Edit</a>
                                 <a class="btn btn-sm btn-primary"
                                     href="delete.php?id=<?php echo $row->id; ?>">Delete</a>
                             </td>
